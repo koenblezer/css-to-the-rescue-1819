@@ -1,0 +1,26 @@
+section {
+  width: 30em;
+  height: 30em;
+  background-color: red;
+  border-top-left-radius:100%;
+  border: black thin solid;
+  float: left;
+}
+
+section:nth-of-type(2) {
+  border-top-right-radius:100%;
+  border-top-left-radius: 0;
+}
+
+section:nth-of-type(3) {
+  border-top-right-radius:0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 100%;
+}
+
+section:nth-of-type(4) {
+  border-top-right-radius:0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 100%;
+}
