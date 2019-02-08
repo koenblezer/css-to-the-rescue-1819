@@ -1,13 +1,62 @@
+div {
+  border: red thin solid;
+  overflow: hidden;
+  position: absolute;
+  height: 80%;
+  width: auto;
+}
+
 main {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   transform: translateX(-50%);
   margin-left: 20px;
-  width: 200%;
+  width: 140%;
   border: purple thin solid;
   overflow: hidden;
+  transition: transform 200ms ease-out 50ms;
 }
+
+input[type="checkbox"] {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  top: 0px;
+  z-index: 222;
+  background-color: green;
+}
+
+input[type="checkbox"] + input[type="checkbox"] {
+  left: 15%;
+  background-color: yellow;
+}
+
+input[type="checkbox"] + input[type="checkbox"] + input[type="checkbox"] {
+  left: 30%;
+}
+
+
+input[type="checkbox"]:checked ~ main {
+    transform: rotate(-90deg) translateY(-78.25em);
+}
+
+input[type="checkbox"] + input[type="checkbox"]:checked ~ main {
+    transform: rotate(-180deg) translateX(78.25em);
+}
+
+input[type="checkbox"] + input[type="checkbox"] + input[type="checkbox"]:checked ~ main {
+    transform: rotate(-270deg) translateY(78.25em);
+}
+
+
+/* main:hover {
+  transform: rotate(-90deg) translateY(-78.25em);
+  transform: rotate(-180deg) translateX(78.25em);
+  transform: rotate(-270deg) translateY(78.25em);
+} */
+
+/* TOP-LEFT */
 
 section {
   width: 55em;
@@ -20,18 +69,28 @@ section {
   justify-self: right;
 }
 
-section:nth-of-type(3) {
-  border-top-right-radius:0;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 100%;
-  float: right;
-}
+
+
+/* TOP-RIGHT */
 
 section:nth-of-type(2) {
   border-top-right-radius:100%;
   border-top-left-radius: 0;
   justify-self: left;
+  background-color: green;
 }
+
+/* BOTTOM-LEFT */
+
+section:nth-of-type(3) {
+  border-top-right-radius:0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 100%;
+  justify-self: right;
+  background-color: blue;
+}
+
+/* BOTTOM-RIGHT */
 
 section:nth-of-type(4) {
   border-top-right-radius:0;
@@ -39,4 +98,5 @@ section:nth-of-type(4) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 100%;
   justify-self: left;
+  background-color: yellow;
 }
