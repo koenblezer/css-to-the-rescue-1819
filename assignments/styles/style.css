@@ -7,46 +7,56 @@ div {
 }
 
 main {
+  font-size: 16px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  transform: translateX(-50%);
-  margin-left: 20px;
+  margin-left: 1em;
   width: 140%;
   border: purple thin solid;
   overflow: hidden;
   transition: transform 200ms ease-out 50ms;
 }
 
-input[type="checkbox"] {
-  width: 25%;
-  height: 25%;
-  position: absolute;
+input[type="radio"] {
+  position: relative;
   top: 0px;
   z-index: 222;
   background-color: green;
 }
 
-input[type="checkbox"] + input[type="checkbox"] {
-  left: 15%;
-  background-color: yellow;
+input[type="radio"]:nth-of-type(2) {
 }
 
-input[type="checkbox"] + input[type="checkbox"] + input[type="checkbox"] {
-  left: 30%;
+input[type="radio"]:nth-of-type(3) {
 }
 
-
-input[type="checkbox"]:checked ~ main {
-    transform: rotate(-90deg) translateY(-78.25em);
+input[type="radio"]:nth-of-type(4) {
 }
 
-input[type="checkbox"] + input[type="checkbox"]:checked ~ main {
-    transform: rotate(-180deg) translateX(78.25em);
+/*
+
+1: RED
+2: GREEN
+3: YELLOW
+4: BLUE
+
+*/
+
+input[type="radio"]:checked ~ main {
+    transform: rotate(0deg) translateX(-78.25em);
 }
 
-input[type="checkbox"] + input[type="checkbox"] + input[type="checkbox"]:checked ~ main {
-    transform: rotate(-270deg) translateY(78.25em);
+input[type="radio"] + input[type="radio"]:checked ~ main {
+    transform: rotate(90deg) translateY(78.25em);
+}
+
+input[type="radio"] + input[type="radio"] + input[type="radio"]:checked ~ main {
+    transform: rotate(180deg) translateX(78.25em);
+}
+
+input[type="radio"] + input[type="radio"] + input[type="radio"] + input[type="radio"]:checked ~ main {
+    transform: rotate(270deg) translateY(-78.25em);
 }
 
 
@@ -69,15 +79,21 @@ section {
   justify-self: right;
 }
 
-
+section article, section header {
+  transform: rotate(-90deg);
+}
 
 /* TOP-RIGHT */
 
 section:nth-of-type(2) {
-  border-top-right-radius:100%;
+  border-top-right-radius: 100%;
   border-top-left-radius: 0;
   justify-self: left;
   background-color: green;
+}
+
+section:nth-of-type(2) article, section:nth-of-type(2) header {
+  transform: rotate(0deg);
 }
 
 /* BOTTOM-LEFT */
@@ -90,6 +106,10 @@ section:nth-of-type(3) {
   background-color: blue;
 }
 
+section:nth-of-type(3) article, section:nth-of-type(3) header {
+  transform: rotate(-180deg);
+}
+
 /* BOTTOM-RIGHT */
 
 section:nth-of-type(4) {
@@ -99,4 +119,8 @@ section:nth-of-type(4) {
   border-bottom-right-radius: 100%;
   justify-self: left;
   background-color: yellow;
+}
+
+section:nth-of-type(4) article, section:nth-of-type(3) header {
+  transform: rotate(-270deg);
 }
