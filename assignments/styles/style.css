@@ -66,6 +66,11 @@ input[type="radio"] + input[type="radio"] + input[type="radio"] + input[type="ra
   transform: rotate(-270deg) translateY(78.25em);
 } */
 
+section div {
+  border: none;
+  position: relative;
+}
+
 /* TOP-LEFT */
 
 section {
@@ -83,6 +88,55 @@ section article, section header {
   transform: rotate(-90deg);
 }
 
+section header {
+  position: relative;
+  top: 23.2em;
+  left: -24em;
+}
+
+section header + article {
+  position: relative;
+  top: 17em;
+  left: -18em;
+  color: purple;
+  border: 1px solid black;
+}
+
+section article:nth-of-type(2) {
+  position: absolute;
+  color: yellow;
+}
+
+section article:nth-of-type(3) {
+  position: absolute;
+  color: green;
+}
+
+section article:nth-of-type(4) {
+  position: absolute;
+  color: black;
+}
+
+section article:nth-of-type(5) {
+  position: absolute;
+  color: #2816ff;
+}
+
+section article:nth-of-type(6) {
+  position: absolute;
+  color: #00ffd1;
+}
+
+section article:nth-of-type(7) {
+  position: absolute;
+  color: #ff9900;
+}
+
+section article:nth-of-type(8) {
+  position: absolute;
+  color: #ff00fc;
+}
+
 /* TOP-RIGHT */
 
 section:nth-of-type(2) {
@@ -94,6 +148,11 @@ section:nth-of-type(2) {
 
 section:nth-of-type(2) article, section:nth-of-type(2) header {
   transform: rotate(0deg);
+}
+
+section:nth-of-type(2) header, section:nth-of-type(2) article {
+  position: inherit;
+  color: black;
 }
 
 /* BOTTOM-LEFT */
@@ -110,6 +169,10 @@ section:nth-of-type(3) article, section:nth-of-type(3) header {
   transform: rotate(-180deg);
 }
 
+section:nth-of-type(3) header, section:nth-of-type(3) article {
+ position: relative;
+}
+
 /* BOTTOM-RIGHT */
 
 section:nth-of-type(4) {
@@ -121,6 +184,25 @@ section:nth-of-type(4) {
   background-color: yellow;
 }
 
-section:nth-of-type(4) article, section:nth-of-type(3) header {
+section:nth-of-type(4) article, section:nth-of-type(4) header {
   transform: rotate(-270deg);
+}
+
+section:nth-of-type(4) header {
+  position: relative;
+  top: -100px;
+  border: red thin solid;
+}
+
+section:nth-of-type(4) header, section:nth-of-type(4) article {
+ position: relative;
+}
+
+section:nth-of-type(4) article:nth-of-type(2) {
+  border: red thin solid;
+  transform: rotate(-345deg);
+  color: red;
+  left: 25em;
+  top: -15em;
+  text-align: left;
 }
