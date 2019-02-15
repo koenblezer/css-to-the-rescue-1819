@@ -1,6 +1,7 @@
 label {
-  background: red;
+  background: #bfeea0;
   padding: 1em;
+  border-top-right-radius: 1em;
 }
 
 div {
@@ -84,15 +85,6 @@ input[type="radio"]:nth-of-type(3) {
 input[type="radio"]:nth-of-type(4) {
 }
 
-/*
-
-1: RED
-2: GREEN
-3: YELLOW
-4: BLUE
-
-*/
-
 input[type="radio"]:checked ~ main {
     transform: rotate(0deg) translateX(-78.25em);
 }
@@ -146,42 +138,34 @@ section header + article {
   position: relative;
   top: 17em;
   left: -18em;
-  color: purple;
 }
 
 section article:nth-of-type(2) {
   position: absolute;
-  color: yellow;
 }
 
 section article:nth-of-type(3) {
   position: absolute;
-  color: green;
 }
 
 section article:nth-of-type(4) {
   position: absolute;
-  color: black;
 }
 
 section article:nth-of-type(5) {
   position: absolute;
-  color: #2816ff;
 }
 
 section article:nth-of-type(6) {
   position: absolute;
-  color: #00ffd1;
 }
 
 section article:nth-of-type(7) {
   position: absolute;
-  color: #ff9900;
 }
 
 section article:nth-of-type(8) {
   position: absolute;
-  color: #ff00fc;
 }
 
 /* TOP-RIGHT */
@@ -198,7 +182,6 @@ section:nth-of-type(2) article, section:nth-of-type(2) header {
 
 section:nth-of-type(2) header, section:nth-of-type(2) article {
   position: inherit;
-  color: black;
 }
 
 /* BOTTOM-LEFT */
@@ -243,7 +226,6 @@ section:nth-of-type(4) header, section:nth-of-type(4) article {
 
 section:nth-of-type(4) article:nth-of-type(2) {
   transform: rotate(-345deg);
-  color: red;
   left: 25em;
   top: -15em;
   text-align: left;
