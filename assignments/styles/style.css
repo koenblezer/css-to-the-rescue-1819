@@ -1,9 +1,19 @@
+label {
+  border: red thin solid;
+  background: red;
+  padding: 1em;
+}
+
 div {
   border: red thin solid;
   overflow: hidden;
   position: absolute;
   height: 80%;
   width: auto;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 input[type="radio"]:checked ~ main {
